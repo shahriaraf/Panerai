@@ -565,7 +565,7 @@ section {
     }
 
     header {
-      flex-direction: column;
+      flex-direction: raw;
       gap: 15px;
       padding: 20px 30px;
     }
