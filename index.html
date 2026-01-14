@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PANERAI | The Laboratorio di Idee</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="toast" id="toast">Action Successful</div>
+
+    <header>
+      <div class="logo hover-target" onclick="navTo('home')">PANERAI</div>
+      <nav class="nav-links">
+        <ul>
+          <li>
+            <a href="#" onclick="navTo('home')" class="active-link hover-target"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="navTo('collections')" class="hover-target"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="navTo('accessories')" class="hover-target"
+              >Strap Configurator</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="navTo('services')" class="hover-target"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="navTo('boutiques')" class="hover-target"
+              >Boutiques</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <svg
+          class="icon-btn hover-target"
+          onclick="notify('Search Opened')"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+        <svg
+          class="icon-btn hover-target"
+          onclick="notify('Account Accessed')"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+        <svg
+          class="icon-btn hover-target"
+          onclick="notify('Cart is Empty')"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+          />
+        </svg>
+      </div>
+      <div class="mobile-menu-btn hover-target" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li onclick="mobileNavTo('home')">Home</li>
+        <li onclick="mobileNavTo('collections')">Collections</li>
+        <li onclick="mobileNavTo('accessories')">Strap Studio</li>
+        <li onclick="mobileNavTo('services')">Services</li>
+        <li onclick="mobileNavTo('boutiques')">Boutiques</li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- HOME SLIDER -->
+      <section id="home" class="active-section">
+        <div class="slider-viewport">
+          <!-- Slide 1: Green -->
+          <div class="slide active">
+            <div class="bg-left"></div>
+            <div class="bg-right" style="background-color: red"></div>
+            <div class="watch-wrapper">
+              <img
+                src="https://pngimg.com/d/watches_PNG9856.png"
+                alt="Green Watch"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="title-group">
+                <h1>Submersible<br />Automatic</h1>
+                <h3>42mm Carbotech™</h3>
+              </div>
+              <div class="video-btn hover-target" onclick="openModal()">
+                <div class="play-circle">▶</div>
+                <div style="margin-left: 15px">
+                  <strong style="display: block; font-size: 12px"
+                    >OFFICIAL CAMPAIGN</strong
+                  ><span style="font-size: 10px; color: #aaa">WATCH VIDEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2: Blue (Hue Rotated to ensure image works) -->
+          <div class="slide next-pos">
+            <div class="bg-left"></div>
+            <div class="bg-right" style="background-color: #3a86ff"></div>
+            <div class="watch-wrapper">
+              <img
+                src="https://pngimg.com/d/watches_PNG9856.png"
+                style="filter: hue-rotate(180deg) brightness(0.9)"
+                alt="Blue Watch"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="title-group">
+                <h1>Luminor Marina<br />Blu Mare</h1>
+                <h3>44mm</h3>
+              </div>
+              <div class="video-btn hover-target" onclick="openModal()">
+                <div class="play-circle">▶</div>
+                <div style="margin-left: 15px">
+                  <strong style="display: block; font-size: 12px"
+                    >RULE THE DARKNESS</strong
+                  ><span style="font-size: 10px; color: #aaa">WATCH VIDEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3: Gold -->
+          <div class="slide next-pos">
+            <div class="bg-left"></div>
+            <div class="bg-right" style="background-color: #c5a059"></div>
+            <div class="watch-wrapper">
+              <img
+                src="https://pngimg.com/d/watches_PNG9874.png"
+                alt="Gold Watch"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="title-group">
+                <h1>Radiomir<br />Goldtech™</h1>
+                <h3>45mm</h3>
+              </div>
+              <div class="video-btn hover-target" onclick="openModal()">
+                <div class="play-circle">▶</div>
+                <div style="margin-left: 15px">
+                  <strong style="display: block; font-size: 12px"
+                    >LEGACY OF THE SEA</strong
+                  ><span style="font-size: 10px; color: #aaa">WATCH VIDEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <div
+              class="control-arrow hover-target"
+              onclick="manualMove('prev')"
+            >
+              ❮
+            </div>
+            <div
+              class="control-arrow hover-target"
+              onclick="manualMove('next')"
+            >
+              ❯
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section id="collections">
+        <div class="section-header">
+          <h2 style="font-size: 40px">New Arrivals</h2>
+          <span
+            class="hover-target"
+            style="font-size: 12px; cursor: pointer"
+            onclick="notify('Loading Catalog...')"
+            >VIEW ALL SERIES ➔</span
+          >
+        </div>
+        <div class="grid-container">
+          <div
+            class="product-card hover-target"
+            onclick="notify('Added to Wishlist')"
+          >
+            <img src="https://pngimg.com/d/watches_PNG9856.png" />
+            <div class="card-info">
+              <h5>Submersible Quaranta</h5>
+              <span>$9,800</span>
+            </div>
+          </div>
+          <div
+            class="product-card hover-target"
+            onclick="notify('Added to Wishlist')"
+          >
+            <img
+              src="https://pngimg.com/d/watches_PNG9856.png"
+              style="filter: hue-rotate(180deg)"
+            />
+            <div class="card-info">
+              <h5>Luminor Due</h5>
+              <span>$7,200</span>
+            </div>
+          </div>
+          <div
+            class="product-card hover-target"
+            onclick="notify('Added to Wishlist')"
+          >
+            <img src="https://pngimg.com/d/watches_PNG9874.png" />
+            <div class="card-info">
+              <h5>Radiomir Tre Giorni</h5>
+              <span>$10,500</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCESSORIES (CONFIGURATOR) -->
+      <section id="accessories">
+        <div class="config-preview">
+          <img
+            id="config-image"
+            src="https://pngimg.com/d/watches_PNG9874.png"
+            alt="Watch Preview"
+          />
+        </div>
+        <div class="config-panel">
+          <h2 style="font-size: 40px; margin-bottom: 10px">Strap Studio</h2>
+          <p style="color: #888; margin-bottom: 40px; font-size: 13px">
+            Select a material to customize your Radiomir look.
+          </p>
+
+          <div
+            class="strap-option hover-target active-strap"
+            onclick="changeStrap(this, 'brown', 0)"
+          >
+            <div class="color-dot" style="background: #5d4037"></div>
+            <div class="strap-info">
+              <h4>Alligator Dark Brown</h4>
+              <p>Standard Stitching</p>
+            </div>
+          </div>
+
+          <div
+            class="strap-option hover-target"
+            onclick="changeStrap(this, 'black', 180)"
+          >
+            <div class="color-dot" style="background: #222"></div>
+            <div class="strap-info">
+              <h4>Alligator Black</h4>
+              <p>Tone on Tone</p>
+            </div>
+          </div>
+
+          <div
+            class="strap-option hover-target"
+            onclick="changeStrap(this, 'blue', 210)"
+          >
+            <div class="color-dot" style="background: #1565c0"></div>
+            <div class="strap-info">
+              <h4>Caoutchouc Blue</h4>
+              <p>Sport Edition</p>
+            </div>
+          </div>
+
+          <div
+            class="btn-line hover-target"
+            style="
+              border: 1px solid white;
+              padding: 15px;
+              text-align: center;
+              margin-top: 20px;
+              text-transform: uppercase;
+              font-size: 12px;
+            "
+            onclick="notify('Configuration Saved')"
+          >
+            Add Configuration to Bag
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="section-header">
+          <h2 style="font-size: 40px">Services</h2>
+        </div>
+        <div class="services-grid">
+          <div
+            class="service-card hover-target"
+            onclick="notify('Appointment Page Loading...')"
+          >
+            <div class="service-icon">⚙</div>
+            <h3>Complete Service</h3>
+            <p style="font-size: 12px; color: #888">
+              Full overhaul and movement check.
+            </p>
+            <div class="btn-text">Book Now</div>
+          </div>
+          <div
+            class="service-card hover-target"
+            onclick="notify('Polishing Guide Loading...')"
+          >
+            <div class="service-icon">✨</div>
+            <h3>Polishing</h3>
+            <p style="font-size: 12px; color: #888">
+              Restoring original shine.
+            </p>
+            <div class="btn-text">Learn More</div>
+          </div>
+          <div
+            class="service-card hover-target"
+            onclick="notify('Warranty Portal Loading...')"
+          >
+            <div class="service-icon">🛡</div>
+            <h3>Pam.Guard</h3>
+            <p style="font-size: 12px; color: #888">
+              Extend warranty to 8 years.
+            </p>
+            <div class="btn-text">Register</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOUTIQUES -->
+      <section id="boutiques">
+        <div class="boutique-list">
+          <h2 style="font-size: 30px; margin-bottom: 30px">Select Boutique</h2>
+          <div
+            class="city-item hover-target"
+            onclick="notify('Locating Florence...')"
+          >
+            <h3>Florence</h3>
+            <p>Piazza San Giovanni</p>
+          </div>
+          <div
+            class="city-item hover-target"
+            onclick="notify('Locating New York...')"
+          >
+            <h3>New York</h3>
+            <p>Madison Avenue</p>
+          </div>
+          <div
+            class="city-item hover-target"
+            onclick="notify('Locating London...')"
+          >
+            <h3>London</h3>
+            <p>New Bond Street</p>
+          </div>
+        </div>
+        <div class="boutique-map"></div>
+      </section>
+    </main>
+
+    <!-- VIDEO MODAL -->
+    <div class="modal-overlay" id="videoModal">
+      <div class="modal-container">
+        <div class="close-modal hover-target" onclick="closeModal()">✕</div>
+        <iframe
+          id="youtube-player"
+          src=""
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
