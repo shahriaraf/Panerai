@@ -636,6 +636,11 @@ section {
       cursor: auto;
     }
 
+    .bg-left,
+    .bg-right {
+      display: none;
+    }
+
     .cursor {
       display: none;
     }
@@ -693,6 +698,11 @@ section {
   @media (max-width: 480px) {
     header {
       padding: 15px 20px;
+    }
+
+    .bg-left,
+    .bg-right {
+      display: none;
     }
 
     .title-group h1 {
